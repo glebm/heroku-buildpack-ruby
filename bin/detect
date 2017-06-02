@@ -1,6 +1,8 @@
 #!/bin/sh
 
-if [ -f "$1/Gemfile" ]; then
+if [ -f "$1/heroku.gemfile" ]; then
+  cp "$1/heroku.gemfile" "$1/Gemfile"
+  cp "$1/heroku.gemfile.lock" "$1/Gemfile.lock"
   echo "Ruby"
   exit 0
 else
